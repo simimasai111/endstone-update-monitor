@@ -1,4 +1,10 @@
-name: Check Release Update
+name: Update Monitor
+
+
+permissions:
+
+  contents: write
+
 
 
 on:
@@ -14,7 +20,7 @@ on:
 
 jobs:
 
-  check:
+  update:
 
 
     runs-on: ubuntu-latest
@@ -39,32 +45,38 @@ jobs:
 
 
 
-      - name: Install
+      - name: Install dependency
 
-        run: |
+        run:
 
           pip install requests
 
 
 
-      - name: Run
+      - name: Run monitor
 
-        run: |
+        run:
 
           python monitor.py
 
 
 
-      - name: Commit
+      - name: Commit changes
 
         run: |
+
 
           git config user.name github-actions
 
           git config user.email github-actions@github.com
 
+
           git add .
 
-          git commit -m "Update release notes" || true
+
+          git commit \
+          -m "Update release notes" \
+          || exit 0
+
 
           git push
