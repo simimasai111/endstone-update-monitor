@@ -1,0 +1,12 @@
+{
+    "repositories": [
+        {
+            "name": "Endstone",
+            "repo": "EndstoneMC/endstone"
+        },
+        {
+            "name": "LeviLamina",
+            "repo": "LiteLDev/LeviLamina"
+        }
+    ]
+}
