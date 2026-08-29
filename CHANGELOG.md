@@ -5,6 +5,44 @@
 ## Endstone
 
 
+### v0.11.10
+
+
+发布时间:
+
+2026-08-29
+
+
+Release:
+
+https://github.com/EndstoneMC/endstone/releases/tag/v0.11.10
+
+
+更新内容:
+
+### Added
+
+- Added support for BDS version 1.26.45. Clients on 1.26.40 through 1.26.44 can still join.
+
+### Changed
+
+- **BREAKING**: The server no longer listens on IPv6 by default, so Endstone runs on hosts without IPv6 support. Set the new `network.ipv6` option in `endstone.toml` to `true` to turn it back on.
+
+### Fixed
+
+- Fixed items vanishing when `PlayerDropItemEvent` is cancelled for a drop from the main hand. The item is now restored to the player's inventory.
+
+**Full Changelog**: https://github.com/EndstoneMC/endstone/compare/v0.11.9...v0.11.10
+
+
+
+---
+
+
+
+## Endstone
+
+
 ### v0.11.9
 
 
